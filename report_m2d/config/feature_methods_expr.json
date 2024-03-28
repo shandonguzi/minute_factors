@@ -1,0 +1,169 @@
+{
+    "methods": [
+        {
+            "name": "late_skew_ret",
+            "function": "skew(idx(ret, slice(-30, None)))",
+            "direction": -1
+        },
+        {
+            "name": "down_vol_perc",
+            "function": "std(less(ret, mean(ret))) / std(ret)",
+            "direction": 1
+        },
+        {
+            "name": "corr_ret_lastret",
+            "function": "corr(ret, shift(ret, 1))",
+            "direction": -1
+        },
+        {
+            "name": "corr_close_nextopen",
+            "function": "corr(shift(close, 1), shift(open, -1))",
+            "direction": 1
+        },
+        {
+            "name": "volume_perc_2",
+            "function": "sum(idx(volume, slice(30, 60))) / sum(volume)",
+            "direction": 1
+        },
+        {
+            "name": "volume_perc_3",
+            "function": "sum(idx(volume, slice(60, 90))) / sum(volume)",
+            "direction": 1
+        },
+        {
+            "name": "volume_perc_4",
+            "function": "sum(idx(volume, slice(90, 120))) / sum(volume)",
+            "direction": 1
+        },
+        {
+            "name": "volume_perc_5",
+            "function": "sum(idx(volume, slice(120, 150))) / sum(volume)",
+            "direction": 1
+        },
+        {
+            "name": "volume_perc_6",
+            "function": "sum(idx(volume, slice(150, 180))) / sum(volume)",
+            "direction": 1
+        },
+        {
+            "name": "volume_perc_7",
+            "function": "sum(idx(volume, slice(180, 210))) / sum(volume)",
+            "direction": 1
+        },
+        {
+            "name": "early_corr_volume_ret",
+            "function": "corr(idx(volume, slice(None, 30)), idx(ret, slice(None, 30)))",
+            "direction": 1
+        },
+        {
+            "name": "corr_volume_amplitude",
+            "function": "corr(volume, (high-low)/open*100)",
+            "direction": -1
+        },
+        {
+            "name": "mmt_pm",
+            "function": "(idx(close, -1) - idx(close, -120)) / idx(close, -120)",
+            "direction": 1
+        },
+        {
+            "name": "mmt_am",
+            "function": "(idx(close, 120) - idx(close, 0)) / idx(close, 0)",
+            "direction": 1
+        },
+        {
+            "name": "mmt_last30",
+            "function": "(idx(close, -1) - idx(close, -30)) / idx(close, -30)",
+            "direction": 1
+        },
+        {
+            "name": "mmt_paratio",
+            "function": "(idx(close, -1) - idx(close, -120)) / idx(close, -120) - (idx(close, 120) - idx(close, 0)) / idx(close, 0)",
+            "direction": -1
+        },
+        {
+            "name": "mmt_between",
+            "function": "(idx(close, -30) - idx(close, 30)) / idx(close, 30)",
+            "direction": -1
+        },
+        {
+            "name": "mmt_ols_qrs",
+            "function": "mean(idx(multiroll(low, high, 50, QRS), (slice(None), 0)))",
+            "direction": -1
+        },
+        {
+            "name": "mmt_ols_corr_square_mean",
+            "function": "mean(pow(idx(multiroll(low, high, 50, multicorr), (slice(None), 0)), 2))",
+            "direction": -1
+        },
+        {
+            "name": "mmt_ols_corr_mean",
+            "function": "mean(idx(multiroll(low, high, 50, multicorr), (slice(None), 0)))",
+            "direction": -1
+        },
+        {
+            "name": "mmt_ols_beta_mean",
+            "function": "mean(idx(multiroll(low, high, 50, QRS_beta), (slice(None), 0)))",
+            "direction": -1
+        },
+        {
+            "name": "mmt_ols_beta_zscore_last",
+            "function": "zscore_last(idx(multiroll(low, high, 50, QRS_beta), (slice(None), 0)))",
+            "direction": -1
+        },
+        {
+            "name": "mmt_top50VolumeRet",
+            "function": "momentum(idx(close, getidx(more(volume, nlmin(volume, 50)))))",
+            "direction": -1
+        },
+        {
+            "name": "mmt_bottom50VolumeRet",
+            "function": "momentum(idx(close, getidx(less(volume, nsmax(volume, 50)))))",
+            "direction": -1
+        },
+        {
+            "name": "mmt_top20VolumeRet",
+            "function": "momentum(idx(close, getidx(more(volume, nlmin(volume, 20)))))",
+            "direction": -1
+        },
+        {
+            "name": "mmt_bottom20VolumeRet",
+            "function": "momentum(idx(close, getidx(less(volume, nsmax(volume, 20)))))",
+            "direction": -1
+        },
+        {
+            "name": "vol_volumelmin",
+            "function": "std(volume)",
+            "direction": -1
+        },
+        {
+            "name": "vol_rangelmin",
+            "function": "std(high/low)",
+            "direction": -1
+        },
+        {
+            "name": "vol_returnlmin",
+            "function": "std(ret)",
+            "direction": -1
+        },
+        {
+            "name": "vol_upVol",
+            "function": "std(more(ret, mean(ret)))",
+            "direction": -1
+        },
+        {
+            "name": "vol_upRatio",
+            "function": "std(more(ret, mean(ret))) / std(ret)",
+            "direction": -1
+        },
+        {
+            "name": "vol_downVol",
+            "function": "std(less(ret, mean(ret)))",
+            "direction": -1
+        },
+        {
+            "name": "vol_downRatio",
+            "function": "std(less(ret, mean(ret))) / std(ret)",
+            "direction": -1
+        }
+    ]
+}

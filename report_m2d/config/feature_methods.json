@@ -1,0 +1,180 @@
+{
+    "methods": [
+        {
+            "name": "late_skew_ret",
+            "function": "late_skew_ret",
+            "params": [30],
+            "direction": -1
+        },
+        {
+            "name": "down_vol_perc",
+            "function": "down_vol_perc",
+            "direction": 1
+        },
+        {
+            "name": "corr_ret_lastret",
+            "function": "corr_ret_lastret",
+            "direction": -1
+        },
+        {
+            "name": "corr_close_nextopen",
+            "function": "corr_close_nextopen",
+            "direction": 1
+        },
+        {
+            "name": "volume_perc_2",
+            "function": "volume_perc_n",
+            "params": [1],
+            "direction": 1
+        },
+        {
+            "name": "volume_perc_3",
+            "function": "volume_perc_n",
+            "params": [2],
+            "direction": 1
+        },
+        {
+            "name": "volume_perc_4",
+            "function": "volume_perc_n",
+            "params": [3],
+            "direction": 1
+        },
+        {
+            "name": "volume_perc_5",
+            "function": "volume_perc_n",
+            "params": [4],
+            "direction": 1
+        },
+        {
+            "name": "volume_perc_6",
+            "function": "volume_perc_n",
+            "params": [5],
+            "direction": 1
+        },
+        {
+            "name": "volume_perc_7",
+            "function": "volume_perc_n",
+            "params": [6],
+            "direction": 1
+        },
+        {
+            "name": "early_corr_volume_ret",
+            "function": "early_corr_volume_ret",
+            "direction": 1
+        },
+        {
+            "name": "corr_volume_amplitude",
+            "function": "corr_volume_amplitude",
+            "direction": -1
+        },
+        {
+            "name": "mmt_pm",
+            "function": "mmt_pm",
+            "direction": 1
+        },
+        {
+            "name": "mmt_am",
+            "function": "mmt_am",
+            "direction": 1
+        },
+        {
+            "name": "mmt_last30",
+            "function": "mmt_last30",
+            "direction": 1
+        },
+        {
+            "name": "mmt_paratio",
+            "function": "mmt_paratio",
+            "direction": -1
+        },
+        {
+            "name": "mmt_between",
+            "function": "mmt_between",
+            "direction": -1
+        },
+        {
+            "name": "mmt_ols_qrs",
+            "function": "mmt_ols_qrs",
+            "params": [50],
+            "direction": -1
+        },
+        {
+            "name": "mmt_ols_corr_square_mean",
+            "function": "mmt_ols_corr_square_mean",
+            "params": [50],
+            "direction": -1
+        },
+        {
+            "name": "mmt_ols_corr_mean",
+            "function": "mmt_ols_corr_mean",
+            "params": [50],
+            "direction": -1
+        },
+        {
+            "name": "mmt_ols_beta_mean",
+            "function": "mmt_ols_beta_mean",
+            "params": [50],
+            "direction": -1
+        },
+        {
+            "name": "mmt_ols_beta_zscore_last",
+            "function": "mmt_ols_beta_zscore_last",
+            "params": [50],
+            "direction": -1
+        },
+        {
+            "name": "mmt_top50VolumeRet",
+            "function": "mmt_topnVolumeRet",
+            "params": [50],
+            "direction": -1
+        },
+        {
+            "name": "mmt_bottom50VolumeRet",
+            "function": "mmt_bottomnVolumeRet",
+            "params": [50],
+            "direction": -1
+        },
+        {
+            "name": "mmt_top20VolumeRet",
+            "function": "mmt_topnVolumeRet",
+            "params": [20],
+            "direction": -1
+        },
+        {
+            "name": "mmt_bottom20VolumeRet",
+            "function": "mmt_bottomnVolumeRet",
+            "params": [20],
+            "direction": -1
+        },
+        {
+            "name": "vol_volumelmin",
+            "function": "vol_volumelmin",
+            "direction": -1
+        },
+        {
+            "name": "vol_rangelmin",
+            "function": "vol_rangelmin",
+            "direction": -1
+        },
+        {
+            "name": "vol_returnlmin",
+            "function": "vol_returnlmin",
+            "direction": -1
+        },
+        {
+            "name": "vol_upVol",
+            "function": "vol_upVol",
+            "direction": -1
+        },
+        {
+            "name": "vol_upRatio",
+            "function": "vol_upRatio",
+            "direction": -1
+        },
+        {
+            "name": "vol_downVol",
+            "function": "vol_downVol",
+            "direction": -1
+        }
+    ]
+}

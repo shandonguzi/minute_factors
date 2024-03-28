@@ -1,0 +1,12 @@
+.vscode/*
+.ipynb_checkpoints/*
+**/__pycache__/**
+*.xlsx
+*.csv
+*.xls
+*test*
+*.ipynb
+*png*
+*.log*
+
+!.gitkeep

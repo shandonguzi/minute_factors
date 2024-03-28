@@ -1,0 +1,92 @@
+{
+    {
+        "name": "shape_skew",
+        "function": "skew(ret)",
+        "direction": -1
+    },
+    {
+        "name": "shape_kurt",
+        "function": "kurtosis(ret)",
+        "direction": -1
+    },
+    {
+        "name": "shape_skratio",
+        "function": "skew(ret) / kurtosis(ret)",
+        "direction": -1
+    },
+    {
+        "name": "shape_skewVol",
+        "function": "skew(volume / sum(volume))",
+        "direction": -1
+    },
+    {
+        "name": "shape_kurtVol",
+        "function": "kurtosis(volume / sum(volume))",
+        "direction": -1
+    },
+    {
+        "name": "shape_skratioVol",
+        "function": "skew(volume / sum(volume)) / kurtosis(volume / sum(volume))",
+        "direction": -1
+    },
+    {
+        "name": "liq_amihud_1min",
+        "function": "mean(abs(ret / volume))",
+        "direction": -1
+    },
+    {
+        "name": "corr_prv",
+        "function": "corr(ret, volume)",
+        "direction": -1
+    },
+    {
+        "name": "corr_prv",
+        "function": "corr(ret, volume)",
+        "direction": -1
+    },
+    {
+        "name": "corr_prvr",
+        "function": "corr(ret, pct(volume))",
+        "direction": -1
+    },
+    {
+        "name": "corr_pv",
+        "function": "corr(close, volume)",
+        "direction": -1
+    },
+    {
+        "name": "corr_pvd",
+        "function": "corr(close, shift(volume, 1))",
+        "direction": -1
+    },
+    {
+        "name": "corr_pvl",
+        "function": "corr(close, shift(volume, -1))",
+        "direction": -1
+    },
+    {
+        "name": "corr_pvr",
+        "function": "corr(close, pct(volume))",
+        "direction": -1
+    },
+    {
+        "name": "trade_bottom20retRatio",
+        "function": "sum(idx(ret * (volume / sum(volume)), slice(-20, None)))",
+        "direction": -1
+    },
+    {
+        "name": "trade_bottom50retRatio",
+        "function": "sum(idx(ret * (volume / sum(volume)), slice(-50, None)))",
+        "direction": -1
+    },
+    {
+        "name": "trade_top20retRatio",
+        "function": "mean(idx(ret / volume, slice(None, 20)))",
+        "direction": -1
+    },
+    {
+        "name": "trade_top50retRatio",
+        "function": "mean(idx(ret / volume, slice(None, 50)))",
+        "direction": -1
+    }
+}
